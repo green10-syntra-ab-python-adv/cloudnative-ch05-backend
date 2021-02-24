@@ -89,7 +89,7 @@ def list_user(user_id):
     # if result == None:
         abort(404)
 
-    # Mongo would give data with single quotes, invalid for json
+    # pymongo would give data with single quotes, invalid for json
     # the mongo data can be stringified and single quotes converted into double quotes
     # yet jsonify would subsequently convert " into \" - making it useless for JSON
     # so we solved it the hard way with flask.json.dumps and a Response object
